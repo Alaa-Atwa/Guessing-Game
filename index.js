@@ -1,5 +1,5 @@
-'use strict';
-
+// export let winScore;
+('use strict');
 const check = document.querySelector('.check');
 const mesg = document.querySelector('.message');
 const again = document.querySelector('.again');
@@ -20,7 +20,7 @@ check.addEventListener('click', function () {
     number.textContent = secret;
     document.querySelector('body').style.backgroundColor = '#60b347';
     document.querySelector('.number').style.width = '35rem';
-    lastScore = score;
+    winScore = score;
     document.querySelector('.highscore').textContent = lastScore;
   } else {
     if (result <= 6) {
