@@ -9,7 +9,6 @@ const secret = Math.floor(Math.random() * 20 + 1);
 // you can also use Math.trunc in this case because we are using positive numbers
 
 let score = 20;
-let lastScore;
 check.addEventListener('click', function () {
   let guess = Number(document.querySelector('.guess').value);
   let result = secret >= guess ? secret - guess : guess - secret;
@@ -20,8 +19,6 @@ check.addEventListener('click', function () {
     number.textContent = secret;
     document.querySelector('body').style.backgroundColor = '#60b347';
     document.querySelector('.number').style.width = '35rem';
-    winScore = score;
-    document.querySelector('.highscore').textContent = lastScore;
   } else {
     if (result <= 6) {
       message = 'you are in range ';
