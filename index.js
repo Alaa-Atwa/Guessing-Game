@@ -1,4 +1,3 @@
-// export let winScore;
 ('use strict');
 const check = document.querySelector('.check');
 const mesg = document.querySelector('.message');
@@ -6,7 +5,6 @@ const again = document.querySelector('.again');
 const number = document.querySelector('.number');
 
 const secret = Math.floor(Math.random() * 20 + 1);
-// you can also use Math.trunc in this case because we are using positive numbers
 
 let score = 20;
 check.addEventListener('click', function () {
@@ -32,7 +30,6 @@ check.addEventListener('click', function () {
       message = 'you are far away from the right answer';
     }
   }
-  // if the guess is right
   if (score === 0) {
     message = 'you lost ! , press Again button to try again';
     document.querySelector('body').style.backgroundColor = '#580e0e';
